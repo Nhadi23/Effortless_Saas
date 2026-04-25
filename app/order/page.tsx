@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { ChevronLeft, Info, Search, CreditCard, Droplets, SprayCan, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -16,11 +17,9 @@ export default function OrderPage() {
   return (
     <div className="flex flex-col gap-6 max-w-5xl mx-auto">
       <div className="w-full flex justify-between items-center mb-2">
-         <Button variant="ghost" asChild>
-           <Link href="/">
-             <ChevronLeft className="w-4 h-4 mr-2" /> Back to Dashboard
-           </Link>
-         </Button>
+         <Link href="/" className={buttonVariants({ variant: "ghost" })}>
+           <ChevronLeft className="w-4 h-4 mr-2" /> Back to Dashboard
+         </Link>
       </div>
       <div>
         <h1 className="text-3xl font-bold tracking-tight">Order a new Service</h1>
