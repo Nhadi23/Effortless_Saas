@@ -61,11 +61,11 @@ export default function WorkflowPage() {
           <p className="text-muted-foreground mt-1">Kelola dan pantau pesanan pelanggan melalui proses produksi.</p>
         </div>
         <Dialog>
-          <DialogTrigger asChild>
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center gap-2">
-              <Plus className="w-4 h-4 shrink-0" />
-              <span>Tambahkan Pesanan</span>
-            </Button>
+          <DialogTrigger
+            render={<Button className="bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center gap-2" />}
+          >
+            <Plus className="w-4 h-4 shrink-0" />
+            <span>Tambahkan Pesanan</span>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px] p-0 overflow-hidden bg-slate-50 border-none rounded-3xl">
             {/* Header / Top BG */}

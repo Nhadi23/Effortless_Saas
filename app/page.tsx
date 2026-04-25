@@ -127,7 +127,7 @@ export default function Dashboard() {
                   <XAxis dataKey="name" stroke="#888888" fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis stroke="#888888" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `Rp ${value}k`} />
                   <Tooltip
-                    formatter={(value: number) => [`Rp ${value}k`, '']}
+                    formatter={(value) => [`Rp ${value}k`, '']}
                     contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
                   />
                   <Line type="monotone" dataKey="revenue" name="Pendapatan (Kotor)" stroke="#10b981" strokeWidth={3} />
@@ -259,7 +259,7 @@ export default function Dashboard() {
                 <XAxis dataKey="name" stroke="#888888" fontSize={12} tickLine={false} axisLine={false} />
                 <YAxis stroke="#888888" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `Rp ${value}k`} />
                 <Tooltip
-                  formatter={(value: number) => [`Rp ${value}k`, '']}
+                  formatter={(value) => [`Rp ${value}k`, '']}
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
                 />
                 <Bar dataKey="revenue" name="Pendapatan" fill="#18181b" radius={[4, 4, 0, 0]} />

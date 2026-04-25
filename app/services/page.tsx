@@ -40,8 +40,8 @@ export default function ServicesPage() {
           <p className="text-muted-foreground mt-1">Manage cleaning services, pricing structure, and active promotions.</p>
         </div>
         <Dialog>
-          <DialogTrigger asChild>
-            <Button><Plus className="w-4 h-4 mr-2"/> Add Service</Button>
+          <DialogTrigger render={<Button />}>
+            <Plus className="w-4 h-4 mr-2"/> Add Service
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>

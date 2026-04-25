@@ -55,11 +55,11 @@ export default function ReportsPage() {
              <span>Ekspor CSV</span>
           </Button>
           <Dialog>
-             <DialogTrigger asChild>
-               <Button className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2">
-                 <Plus className="w-4 h-4 shrink-0" />
-                 <span>Kelola Pengeluaran</span>
-               </Button>
+             <DialogTrigger
+               render={<Button className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2" />}
+             >
+               <Plus className="w-4 h-4 shrink-0" />
+               <span>Kelola Pengeluaran</span>
              </DialogTrigger>
              <DialogContent className="sm:max-w-[425px] p-0 overflow-visible bg-white border-none rounded-2xl shadow-xl">
                  <div className="flex justify-between items-center p-5 border-b">
@@ -131,10 +131,10 @@ export default function ReportsPage() {
                  </div>
 
                  <div className="grid grid-cols-2 gap-3 p-5 border-t">
-                    <DialogTrigger asChild>
-                      <Button variant="outline" className="h-12 w-full rounded-xl text-gray-700 font-semibold border-gray-300 bg-white hover:bg-gray-50">
-                        Batal
-                      </Button>
+                    <DialogTrigger
+                      render={<Button variant="outline" className="h-12 w-full rounded-xl text-gray-700 font-semibold border-gray-300 bg-white hover:bg-gray-50" />}
+                    >
+                      Batal
                     </DialogTrigger>
                     <Button className="h-12 w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold">
                       Simpan
@@ -184,7 +184,7 @@ export default function ReportsPage() {
               <XAxis dataKey="month" stroke="#888888" fontSize={12} tickLine={false} axisLine={false} />
               <YAxis stroke="#888888" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `Rp ${value}k`} />
               <Tooltip
-                formatter={(value: number) => [`Rp ${value}k`, '']}
+                formatter={(value) => [`Rp ${value}k`, '']}
                 contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
               />
               <Legend />
